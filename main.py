@@ -7,8 +7,11 @@ This is the main module where the entire program is run.
 Contributors: Manaljav Munkhbayar, Kevin Hu, Stanley Pang, Jaeyong Lee.
 """
 from user import User, construct_top_songs_list
+import user_data
 import decision_tree
 from decision_tree import Song, read_and_write_csv, songs_final_csv_to_songs, generate_decision_tree
+
+import subprocess
 
 
 def load_user() -> User:
@@ -17,7 +20,6 @@ def load_user() -> User:
 
     After retrieving all necessary information, this function returns an instance of the User class.
     """
-    import user_data
     user_data.run_server()
     top_songs = construct_top_songs_list(user_data.top_tracks_ids, user_data.top_tracks_energy,
                                          user_data.top_tracks_danceability, user_data.top_tracks_loudness,

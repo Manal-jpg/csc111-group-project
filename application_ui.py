@@ -66,7 +66,8 @@ def start_button_event() -> None:
 
 def end_button_event() -> None:
     """The event that happens when the following button is pressed"""
-    user_data.stop_server()
+    # user_data.stop_server()
+    print("i'm trying to kill the server!")
 
 
 button = Button(root, text='Start', font=('Verdana', 12), command=(start_button_event))
