@@ -13,6 +13,7 @@ from decision_tree import Song, read_and_write_csv, songs_final_csv_to_songs, ge
 
 import subprocess
 
+subprocess.run(['python3', 'main2.py'])
 
 def load_user() -> User:
     """ This function runs user_data.py which will start the Bottle server used to log in with

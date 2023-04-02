@@ -13,6 +13,8 @@ from math import ceil, floor
 from tkinter import *
 from PIL import ImageTk, Image
 
+import subprocess
+
 root = Tk()
 
 # Sets Window Size and Position
@@ -63,6 +65,8 @@ def create_label():
 def start_button_event() -> None:
     """The event that happens when the following button is pressed"""
     main.run()
+    # subprocess.run(["/usr/local/bin/python", "-c", "print('This is a subprocess')"])
+    # subprocess.run(["python3", 'main2.py'])
 
 def end_button_event() -> None:
     """The event that happens when the following button is pressed"""
